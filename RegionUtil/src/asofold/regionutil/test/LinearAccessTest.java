@@ -7,7 +7,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import asofold.regionutil.access.LinearAccess;
+import asofold.regionutil.access.AccessMapLinear;
 
 public class LinearAccessTest {
 
@@ -17,7 +17,7 @@ public class LinearAccessTest {
 	@Test
 	public void testConsistency() {
 		Set<Integer> keys = TestUtil.getIntSet(1000, -1000, 1000);
-		LinearAccess<Integer> access = new LinearAccess<Integer>(1000);
+		AccessMapLinear<Integer> access = new AccessMapLinear<Integer>(1000);
 		int n = 0;
 		// Adding elements:
 		for ( Integer key : keys){
