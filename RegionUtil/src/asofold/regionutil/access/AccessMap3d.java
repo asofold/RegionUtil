@@ -75,12 +75,30 @@ public class AccessMap3d<T>{
 		final List<T> out = new LinkedList<T>();
 		final List<AccessMapLinear<AccessMapLinear<T>>> maps2 = map.get(x, dx);
 		if  (maps2.isEmpty()) return out;
-		for ( final AccessMapLinear<AccessMapLinear<T>> map2 : maps2){
+		for ( AccessMapLinear<AccessMapLinear<T>> map2 : maps2){
 			final List<AccessMapLinear<T>> maps3 = map2.get(z, dz);
 			if ( maps3.isEmpty() ) continue;
-			for ( final AccessMapLinear<T> map3 : maps3 ){
+			for ( AccessMapLinear<T> map3 : maps3 ){
 				final List<T> values = map3.get(y, dy);
 				if ( !values.isEmpty() ) out.addAll(values);
+			}
+		}
+		return out;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public final List<T> values(){
+		final List<T> out = new LinkedList<T>();
+		final Object[] maps2 = map.getValueArray();
+		for (int i=0; i<map.size(); i++){
+			final AccessMapLinear<AccessMapLinear<T>> map2 = (AccessMapLinear<AccessMapLinear<T>>) maps2[i];
+			final Object[] maps3 = map2.getValueArray();
+			for (int k=0; k<map2.size(); k++){
+				final AccessMapLinear<T> map3 = (AccessMapLinear<T>) maps3[k];
+				final Object[] all = map3.getValueArray();
+				for ( int m=0; m<map3.size(); m++){
+					out.add((T) all[m]);
+				}
 			}
 		}
 		return out;

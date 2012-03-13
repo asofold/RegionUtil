@@ -271,6 +271,15 @@ public class AccessMapLinear<T> {
 		values = new Object[initialCapacity];
 	}
 	
+	@SuppressWarnings("unchecked")
+	public final List<T> values(){
+		final List<T> out = new LinkedList<T>();
+		for ( int i=0; i<size; i++){
+			out.add((T) values[i]);
+		}
+		return out;
+	}
+	
 	public final boolean isEmpty(){
 		return size == 0;
 	}
@@ -302,7 +311,7 @@ public class AccessMapLinear<T> {
 	
 	private final T removeIndex( final int i){
 		@SuppressWarnings("unchecked")
-		T out = (T) values[i];
+		final T out = (T) values[i];
 		for (int k = i; k<size-1; k++){
 			keys[k]  = keys[k+1];
 			values[k] = values[k+1];
