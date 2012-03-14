@@ -54,5 +54,7 @@ public class LinearAccessTest {
 			}
 			if ( !set1.equals(set2)) fail("Inconsistent get range: (to be displayed)");
 		}
+		
+		// TODO: remove test , detach to static methods to allow for more flexible testing.
 	}
 }
