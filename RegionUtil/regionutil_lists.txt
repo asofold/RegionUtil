@@ -6,6 +6,10 @@
 (0.2.0)
 - !(add) tests + methods for remove, getClosest, (getClosestKey): AccessMapLinear, AccessMap3d
 
+
+CHANGELOG
+---------------------------
+
 (0.1.0)
 - (add) method for getting values: AccessMapLinear, AccessMap3d
 
