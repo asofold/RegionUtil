@@ -1,4 +1,4 @@
-package asofold.regionutil.access;
+package me.asofold.bukkit.regionutil.access;
 
 import java.util.LinkedList;
 import java.util.List;

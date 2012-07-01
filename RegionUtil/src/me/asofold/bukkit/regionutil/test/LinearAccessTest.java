@@ -1,13 +1,14 @@
-package asofold.regionutil.test;
+package me.asofold.bukkit.regionutil.test;
 
 import static org.junit.Assert.fail;
 
 import java.util.HashSet;
 import java.util.Set;
 
+import me.asofold.bukkit.regionutil.access.AccessMapLinear;
+
 import org.junit.Test;
 
-import asofold.regionutil.access.AccessMapLinear;
 
 public class LinearAccessTest {
 

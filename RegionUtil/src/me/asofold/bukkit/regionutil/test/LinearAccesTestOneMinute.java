@@ -1,4 +1,4 @@
-package asofold.regionutil.test;
+package me.asofold.bukkit.regionutil.test;
 
 import org.junit.Test;
 
