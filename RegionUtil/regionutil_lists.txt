@@ -9,12 +9,15 @@ STACK
 - !(add) LinearAccess and AccessMap3d addMany
 
 
-(0.2.0)
+***
 - !(add) tests + methods for remove, getClosest, (getClosestKey): AccessMapLinear, AccessMap3d
 
 
 CHANGELOG
 ---------------------------
+
+(2.0.0)
+- (CHANGE) Packet naming.
 
 (1.0.0)
 - (CHANGE) Packet structure
