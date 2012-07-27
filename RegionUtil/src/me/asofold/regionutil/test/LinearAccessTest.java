@@ -1,11 +1,11 @@
-package me.asofold.bukkit.regionutil.test;
+package me.asofold.regionutil.test;
 
 import static org.junit.Assert.fail;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import me.asofold.bukkit.regionutil.access.AccessMapLinear;
+import me.asofold.regionutil.access.AccessMapLinear;
 
 import org.junit.Test;
 

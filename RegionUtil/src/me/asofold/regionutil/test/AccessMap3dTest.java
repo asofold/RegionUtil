@@ -1,4 +1,4 @@
-package me.asofold.bukkit.regionutil.test;
+package me.asofold.regionutil.test;
 
 import static org.junit.Assert.*;
 
